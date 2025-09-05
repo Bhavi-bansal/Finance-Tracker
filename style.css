@@ -1,4 +1,4 @@
-/* --- Global Styles & Variables --- */
+
 :root {
     
     --primary-color: #8bb2ff; 
@@ -32,7 +32,7 @@ body {
     min-height: 100vh;
 }
 
-/* --- Login Page Styles --- */
+
 .auth-container {
     max-width: 420px;
     margin: 80px auto;
@@ -60,7 +60,7 @@ body {
 }
 
 
-/* --- Header Styles --- */
+
 header {
     background-color: var(--card-background); 
     color: var(--text-color);
@@ -80,7 +80,7 @@ header h1 {
     font-size: 1.8rem; 
 }
 
-/* --- Dashboard Layout --- */
+
 .dashboard-container {
     display: grid;
     grid-template-columns: 380px 1fr;
@@ -90,7 +90,7 @@ header h1 {
     margin: 0 auto;
 }
 
-/* --- Buttons, Forms, Cards --- */
+
 .card {
     background-color: var(--card-background);
     border-radius: 16px;
@@ -191,7 +191,7 @@ input:focus, select:focus {
     background-color: rgba(255, 255, 255, 0.1); 
 }
 
-/* --- Specific Panel Styles --- */
+
 .summary-cards {
     display: grid;
     grid-template-columns: 1fr;
@@ -243,7 +243,7 @@ input:focus, select:focus {
     gap: 1rem;
 }
 
-/* Transaction Table */
+
 .transaction-table {
     width: 100%;
     border-collapse: collapse;
@@ -267,7 +267,7 @@ input:focus, select:focus {
 .transaction-table .expense { color: var(--expense-color); }
 .transaction-table td:first-child { font-weight: 600; } 
 
-/* Chart Styles */
+
 .charts-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -281,7 +281,7 @@ input:focus, select:focus {
     
 }
 
-/* --- Category List Styles --- */
+
 .category-list {
     list-style: none;
     padding: 0;
@@ -304,7 +304,7 @@ input:focus, select:focus {
     background-color: rgba(255, 255, 255, 0.05); 
 }
 
-/* --- Type Toggle Switch Styles --- */
+
 .type-toggle {
     display: flex;
     align-items: center;
@@ -356,7 +356,7 @@ input:checked + .slider:before {
 }
 
 
-/* --- Responsive Design --- */
+
 @media (max-width: 1200px) {
     .dashboard-container {
         grid-template-columns: 1fr;
