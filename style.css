@@ -1,18 +1,17 @@
 /* --- Global Styles & Variables --- */
 :root {
-    /* Dark Theme Colors */
-    --primary-color: #8bb2ff; /* Soft Blue for accents/buttons */
-    --background-color: #1a1a2e; /* Deep Dark Blue */
-    --card-background: rgba(255, 255, 255, 0.08); /* Transparent White for glass effect */
-    --text-color: #e0e0e0; /* Light Grey for general text */
-    --text-secondary-color: #a0a0a0; /* Muted Grey for secondary text */
-    --income-color: #6aff8a;  /* Bright Green for income */
-    --expense-color: #ff6a6a; /* Bright Red for expense */
-    --border-color: rgba(255, 255, 255, 0.15); /* Lighter border for contrast */
-    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Stronger shadow for depth */
+    
+    --primary-color: #8bb2ff; 
+    --background-color: #1a1a2e; 
+    --card-background: rgba(255, 255, 255, 0.08); 
+    --text-color: #e0e0e0; 
+    --text-secondary-color: #a0a0a0; 
+    --income-color: #6aff8a;  
+    --expense-color: #ff6a6a; 
+    --border-color: rgba(255, 255, 255, 0.15); 
+    --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); 
 
-    /* Glassmorphism specific properties */
-    --backdrop-filter: blur(10px) saturate(1.8); /* Stronger blur and saturation */
+    --backdrop-filter: blur(10px) saturate(1.8);
     --webkit-backdrop-filter: blur(10px) saturate(1.8);
 }
 
@@ -28,7 +27,7 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* Optional: Add a subtle gradient for more depth */
+    
     background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1c 100%);
     min-height: 100vh;
 }
@@ -39,19 +38,19 @@ body {
     margin: 80px auto;
     padding: 40px;
     background-color: var(--card-background);
-    border-radius: 16px; /* Slightly larger radius */
+    border-radius: 16px;
     border: 1px solid var(--border-color);
     text-align: center;
     box-shadow: var(--shadow);
     backdrop-filter: var(--backdrop-filter);
     -webkit-backdrop-filter: var(--webkit-backdrop-filter);
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    transition: all 0.3s ease; 
 }
 
 .auth-container h1 {
-    font-size: 2rem; /* Slightly larger heading */
+    font-size: 2rem; 
     font-weight: 600;
-    color: var(--text-color); /* Match text color for clarity */
+    color: var(--text-color); 
     margin-bottom: 8px;
 }
 
@@ -63,14 +62,14 @@ body {
 
 /* --- Header Styles --- */
 header {
-    background-color: var(--card-background); /* Use transparent card background */
+    background-color: var(--card-background); 
     color: var(--text-color);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border-color);
-    box-shadow: var(--shadow); /* Add shadow to header */
+    box-shadow: var(--shadow); 
     backdrop-filter: var(--backdrop-filter);
     -webkit-backdrop-filter: var(--webkit-backdrop-filter);
 }
@@ -78,7 +77,7 @@ header {
 header h1 {
     color: var(--text-color);
     margin: 0;
-    font-size: 1.8rem; /* Slightly larger header title */
+    font-size: 1.8rem; 
 }
 
 /* --- Dashboard Layout --- */
@@ -91,10 +90,10 @@ header h1 {
     margin: 0 auto;
 }
 
-/* --- General Components (Buttons, Forms, Cards) --- */
+/* --- Buttons, Forms, Cards --- */
 .card {
     background-color: var(--card-background);
-    border-radius: 16px; /* Consistent border radius */
+    border-radius: 16px;
     padding: 1.5rem;
     border: 1px solid var(--border-color);
     margin-bottom: 1.5rem;
@@ -105,14 +104,13 @@ header h1 {
 }
 
 .card:hover {
-    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.5);
 }
 
 
 .btn {
     background-color: var(--primary-color);
-    color: var(--background-color); /* Darker text for contrast on bright buttons */
-    border: none;
+    color: var(--background-color); 
     padding: 12px 20px;
     border-radius: 8px;
     cursor: pointer;
@@ -120,12 +118,12 @@ header h1 {
     font-weight: 600;
     width: 100%;
     transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for buttons */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .btn:hover {
-    background-color: #a7ccff; /* Lighter primary color on hover */
-    transform: translateY(-3px); /* More pronounced lift */
+    background-color: #a7ccff; 
+    transform: translateY(-3px); 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -148,7 +146,7 @@ header h1 {
 }
 .btn-delete:hover {
     color: var(--expense-color);
-    background-color: rgba(255, 106, 106, 0.1); /* Light red transparent background */
+    background-color: rgba(255, 106, 106, 0.1);
     transform: none;
 }
 
@@ -175,7 +173,7 @@ select {
     padding: 12px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.05); /* Very subtle transparency for inputs */
+    background-color: rgba(255, 255, 255, 0.05); 
     color: var(--text-color);
     font-size: 1rem;
     transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
@@ -183,14 +181,14 @@ select {
 
 input::placeholder {
     color: var(--text-secondary-color);
-    opacity: 0.7; /* Make placeholder text a bit lighter */
+    opacity: 0.7; 
 }
 
 input:focus, select:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(139, 178, 255, 0.2); /* Soft blue focus glow */
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly more visible on focus */
+    box-shadow: 0 0 0 3px rgba(139, 178, 255, 0.2); 
+    background-color: rgba(255, 255, 255, 0.1); 
 }
 
 /* --- Specific Panel Styles --- */
@@ -235,13 +233,13 @@ input:focus, select:focus {
 }
 
 .manage-category-group .btn {
-    width: auto; /* Override full width */
+    width: auto; 
     flex-shrink: 0;
 }
 
 .filters .filter-group {
     display: grid;
-    grid-template-columns: 1fr; /* Single column for filter */
+    grid-template-columns: 1fr; 
     gap: 1rem;
 }
 
@@ -267,8 +265,7 @@ input:focus, select:focus {
 
 .transaction-table .income { color: var(--income-color); }
 .transaction-table .expense { color: var(--expense-color); }
-.transaction-table td:first-child { font-weight: 600; } /* Emphasize description */
-
+.transaction-table td:first-child { font-weight: 600; } 
 
 /* Chart Styles */
 .charts-container {
@@ -281,7 +278,7 @@ input:focus, select:focus {
 .chart-container {
     position: relative;
     height: 350px;
-    /* Ensure charts have enough contrast within the glassmorphism card */
+    
 }
 
 /* --- Category List Styles --- */
@@ -291,7 +288,7 @@ input:focus, select:focus {
     margin-top: 1.5rem;
     max-height: 200px;
     overflow-y: auto;
-    border-top: 1px solid var(--border-color); /* Separator for the list */
+    border-top: 1px solid var(--border-color); 
     padding-top: 0.5rem;
 }
 .category-list li {
@@ -304,7 +301,7 @@ input:focus, select:focus {
     color: var(--text-color);
 }
 .category-list li:hover {
-    background-color: rgba(255, 255, 255, 0.05); /* Subtle hover for list items */
+    background-color: rgba(255, 255, 255, 0.05); 
 }
 
 /* --- Type Toggle Switch Styles --- */
@@ -336,7 +333,7 @@ input:focus, select:focus {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--expense-color); /* Expense color for off state */
+    background-color: var(--expense-color); 
     transition: .4s;
     border-radius: 28px;
 }
@@ -352,7 +349,7 @@ input:focus, select:focus {
     border-radius: 50%;
 }
 input:checked + .slider {
-    background-color: var(--income-color); /* Income color for on state */
+    background-color: var(--income-color); 
 }
 input:checked + .slider:before {
     transform: translateX(22px);
