@@ -1,7 +1,7 @@
-// Wait for the DOM to be fully loaded before running the script
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Authentication & User-Specific Data Setup ---
+    
     const currentUser = sessionStorage.getItem('currentUser');
     if (!currentUser) {
         window.location.href = 'index.html';
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const TRANSACTIONS_KEY = `transactions_${currentUser}`;
     const CATEGORIES_KEY = `categories_${currentUser}`;
 
-    // --- DOM Element Selectors ---
+   
     const transactionForm = document.getElementById('transaction-form');
     const descriptionInput = document.getElementById('description');
     const amountInput = document.getElementById('amount');
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let expenseChart;
     let incomeChart;
 
-    // --- State Management ---
+    
     let transactions = JSON.parse(localStorage.getItem(TRANSACTIONS_KEY)) || [];
     let categories = JSON.parse(localStorage.getItem(CATEGORIES_KEY)) || ['Salary', 'Groceries', 'Bills', 'Entertainment', 'Freelance'];
 
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem(CATEGORIES_KEY, JSON.stringify(categories));
     };
 
-    // --- Core Functions ---
+   
 
     const render = () => {
         updateSummary();
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const renderCategories = () => {
-        categoryList.innerHTML = ''; // Clear existing list
+        categoryList.innerHTML = ''; 
         categories.forEach(cat => {
             const li = document.createElement('li');
             const span = document.createElement('span');
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
         render();
         transactionForm.reset();
         dateInput.valueAsDate = new Date();
-        typeToggle.checked = true; // Reset toggle to income
+        typeToggle.checked = true; 
     };
 
     const deleteTransaction = (id) => {
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'index.html';
     };
 
-    // --- Event Listeners ---
+    
     transactionForm.addEventListener('submit', addTransaction);
     addCategoryBtn.addEventListener('click', addCategory);
     logoutBtn.addEventListener('click', logout);
@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     filterCategorySelect.addEventListener('change', applyFilters);
 
-    // --- Initial Call ---
+    
     dateInput.valueAsDate = new Date();
     render();
 });
